@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+{% block title %}Index of {{name}}{% endblock %}
+{% block head %}
+  {{ super() }}
+  <style type="text/css">
+    .important { color: #336699; }
+  </style>
+{% endblock %}
+{% block content %}
+<div class="row">
+    <div class="col-xs-10 col-xs-offset-1">
+        <h1>Gestió d'espais simples</h1>
+        <ul>
+            <li><a href="{{ url_for('llista_espais_simples') }}">Llista espais simples</a>
+                    <p>Aquesta és la primera operació que has de fer. Els espais simples són les mínimes unitats d'espai 
+                    que poden reservar-se independentment. Posteriorment es podran crear espais compostos de més d'espais 
+                    simples, i més endavant encara esdeveniments que combinin espais.</p>
+            </li>
+            <li><a href="{{ url_for('llista_espais_complexos') }}">Llista espais complexos</a></li>
+            <li><a href="#">Crear events simples (pendent)</a></li>
+            <li><a href="#">Crear events complexos (pendent)</a></li>
+        </ul>
+    </div>
+</div>
+
+{% endblock %}

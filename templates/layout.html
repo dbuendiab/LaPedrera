@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>{% block title %}{% endblock %} - La Pedrera</title>
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+
+    {% block head %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    {% endblock %}
+
+<style>/*
+.dropdown-menu {
+  background-color: #2677bc;
+  color: rgba(255, 255, 255, .5);
+}
+
+.dropdown-menu > a:link, .dropdown-menu > a {
+    background-color: #2578bf;;
+    color: rgba(255, 255, 255, .5);
+    background-image: none;
+}
+.dropdown-menu > a:hover {
+    background-color: #2677bc;
+    color: rgba(255, 255, 255, .8);
+    background-image: none;
+}*/
+
+</style>
+
+
+  </head>
+  <body>
+    
+
+<nav class="navbar navbar-toggleable-sm navbar-inverse cap">
+  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <a class="navbar-brand" href="#"><img src="{{ url_for('static', filename='titulo_v2.png') }}" alt="Responsive image"></a>
+
+  <div class="collapse navbar-collapse dropdown" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      
+      <li class="nav-item">
+        <!--<a class="nav-link disabled" href="#">Disabled</a>-->
+        <a class="nav-link" href="{{ url_for('creacio_activitats') }}">Crear activitats (pendent)</a>
+      </li>
+      
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Configuració
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="{{ url_for('llista_espais_simples') }}">Espais simples</a>
+          <a class="dropdown-item" href="{{ url_for('llista_espais_complexos') }}">Espais complexos</a>
+          <a class="dropdown-item" href="#">Continuará</a>
+        </div>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<main class="container">
+
+<!--<div class="container">-->
+
+  {% block content %}{% endblock %}
+  
+<!--</div>-->
+
+</main>
+
+<footer class="peu">
+  {% block footer %}
+  &copy; Copyright 2017 by <a href="mailto://dbuendiab@yahoo.es/">Diego Buendía</a>.
+  {% endblock %}
+</<footer>
+
+
+    <!-- jQuery first, then Tether, then Bootstrap JS. -->
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+
+  </body>
+</html>
+

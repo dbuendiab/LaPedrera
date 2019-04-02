@@ -1,0 +1,108 @@
+{% extends "layout.html" %}
+{% block title %}Activitats{% endblock %}
+{% block head %}
+  {{ super() }}
+  <style type="text/css">
+    summary { 
+        outline: None;
+        cursor: pointer;
+        /*color: #336699;
+        padding: .5em 0em 1em 1em;
+        font-size: 1.3em;*/
+    }
+
+  </style>
+{% endblock %}
+{% block content %}
+
+<article>
+    <h1>Creació d'activitats</h1>
+    <section>
+        <details>
+            <summary>Nom, tipus y descripció</summary>
+            <div class="row form-group">
+                <div class="col col-sm-6 offset-sm-1 m-1">
+                    <input class="form-control" type="text" name="nom" placeholder="Nom de la activitat">
+                </div>
+                <div class="col-sm-3 m-1">
+                    <select class="form-control" size="1" name="categoria" placeholder="categoria">
+                        <option value="0">&lt;activitat&gt;</option>
+                        <option value="1">Puntual</option>
+                        <option value="2">Temporal</option>
+                        <option value="3">Permanent</permanent></option>
+                    </select>
+                </div>
+                <div class="col-sm-9 m-1">
+                    <textarea class="form-control" type="text" name="descripcio" placeholder="Informació adicional de la activitat" rows="1" style="width: 100%"></textarea>
+                </div>
+            </div>
+        </details>
+        
+        <details>
+            <summary>Definir espais i temps</summary>
+                <div class="row form-group">
+                    <div class="col-sm-10 m-1">
+                        {{ select|safe }}
+                    </div>
+                    <div class="col-sm-4 m-1">
+                        <input class="form-control" type="date" name="t_ini_dia">
+                    </div>
+                    <div class="col-sm-2 m-1">
+                        <input class="form-control" type="time" name="t_ini_hora">
+                    </div>
+                    <div class="col-sm-2 m-1">
+                        <input class="form-control" type="time" name="t_fin_hora">
+                    </div>
+                </div>
+        </details>
+        
+    </section>
+</article>
+<!--
+<div class="row">
+    <div class="col-xs-10 col-xs-offset-1">
+    <div>
+        <h2 class=text-center>Creació d'activitats</h2>
+    
+        <div>
+            <h4 class="pl-1">Nom, tipus, descripció</h4>
+                <div  id="demo" class="row form-group">
+                    <div class="col-xs-6 m-1">
+                        <input class="form-control" form="" type="text" name="nom" placeholder="Nom de la activitat">
+                    </div>
+                    <div class="col-xs-6 m-1">
+                        <select class="form-control" name="categoria" placeholder="categoria">
+                            <option value="0">&lt;activitat&gt;</option>
+                            <option value="1">Puntual</option>
+                            <option value="2">Temporal</option>
+                            <option value="3">Permanent</permanent></option>
+                        </select>
+                    </div>
+                    <div class="col-xs-12 m-1">
+                        <textarea class="form-control" type="text" name="descripcio" placeholder="Informació adicional de la activitat" rows="1" style="width: 100%"></textarea>
+                    </div>
+                </div>
+             </div>
+        <details>
+            <summary>Definir espais i temps</summary>
+                <div class="row form-group">
+                    <div class="col-xs-12 col-sm-4 control">
+                        {{ select|safe }}
+                    </div>
+                    <div class="col-xs-12 col-sm-4 control">
+                        <input class="form-control" type="date" name="t_ini_dia">
+                    </div>
+                    <div class="col-xs-6 col-sm-2 control">
+                        <input class="form-control" type="time" name="t_ini_hora">
+                    </div>
+                    <div class="col-xs-6 col-sm-2 control">
+                        <input class="form-control" type="time" name="t_fin_hora">
+                    </div>
+                </div>
+        </details>
+    </div>
+    </div>
+</div>
+-->
+
+{% endblock %}

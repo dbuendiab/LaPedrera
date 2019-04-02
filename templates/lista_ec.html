@@ -1,0 +1,61 @@
+{% extends "layout.html" %}
+{% block title %}Espais complexos{% endblock %}
+{% block head %}
+  {{ super() }}
+  <style type="text/css">
+    .important { color: #336699; }
+  </style>
+{% endblock %}
+{% block content %}
+<div class="row">
+    <div class="col-xs-10 col-xs-offset-1">
+        <h1>Llistat d'espais complexos</h1>
+        <p>Els espais complexos són combinacions de espais simples que s'han de considerar com una sola unitat d'espai 
+        a efectes de la seva ocupació. Están compostos de espais simples.</p>
+
+<table class="table table-responsive table-striped table-hover">
+    <thead>
+        <tr>
+        <tr>
+            <th>id</th>
+            <th>nom</th>
+            <th>color</th>
+            <th>espais</th>
+            <th>observacions</th>
+        </tr>
+    </thead>
+    <tbody>       
+{% for dict_item in lista_es %}
+        <tr data-id="{{ dict_item['_id'] }}">
+          <td>{{ dict_item['id'] }}</td>
+          <td style="background-color: {{ dict_item['color'] }}">{{ dict_item['nom'] }}</td>
+          <td contenteditable="true"><input class="colorpicker" type="color" value="{{ dict_item['color'] }}"</td>
+          <td>
+              <select class="table">
+              {% for espai_item in dict_item['espais'] %}
+                  <option>{{ espai_item['id'] }}: {{ espai_item['nom'] }}</option>
+              {% endfor %} 
+              </select>
+          </td>
+          <td contenteditable="true">{{ dict_item['observacions'] }}</td>
+        </tr>
+{% endfor %}     
+    </tbody>
+</table>         
+
+    </div>
+</div>
+
+<script>
+$(function () {
+    $('.colorpicker').change(function() {
+        var new_color = $(this).val();
+        var prev_node = $(this).closest('td').prev();
+        //alert(new_color);
+        prev_node.css({'background-color': new_color});
+    });
+});
+</script>
+
+{% endblock %}
+

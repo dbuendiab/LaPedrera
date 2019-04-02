@@ -1,0 +1,88 @@
+
+*
+{
+    /*border: 1px solid blue;*/
+}
+
+body {
+    font-size: 1rem;
+    background-color: aliceblue;
+}
+
+.cap {
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#7db9e8+0,207cca+0,00418f+0,005898+99 */
+    background: #7db9e8; /* Old browsers */
+    background: -moz-linear-gradient(top, #7db9e8 0%, #207cca 0%, #00418f 0%, #005898 99%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #7db9e8 0%,#207cca 0%,#00418f 0%,#005898 99%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #7db9e8 0%,#207cca 0%,#00418f 0%,#005898 99%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7db9e8', endColorstr='#005898',GradientType=0 ); /* IE6-9 */
+/*
+    color: white;
+    padding: .5em;
+    margin: 1em 0;*/
+}
+
+.peu {
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#005898+1,00418f+100,207cca+100,7db9e8+100 */
+    background: #005898; /* Old browsers */
+    background: -moz-linear-gradient(top, #005898 1%, #00418f 100%, #207cca 100%, #7db9e8 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #005898 1%,#00418f 100%,#207cca 100%,#7db9e8 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #005898 1%,#00418f 100%,#207cca 100%,#7db9e8 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#005898', endColorstr='#7db9e8',GradientType=0 ); /* IE6-9 */
+    
+    color: #b9d9f4;
+    padding: .5em;
+    margin: 1em 0;
+    width: 100%;
+    text-align: center;
+    font-size: .8em;
+}
+
+.peu a:link, .peu a:visited {
+    color: white;
+    text-decoration: underline;
+    width: 100%;
+}
+
+/*
+.contenido {
+    min-height: 300px;
+}
+*/
+
+.form-control {
+    /* Originalmente .5rem .75rem, los laterales descuadran la posición */
+    padding: .5rem 0rem;
+}
+
+.navbar-inverse .navbar-nav .nav-link {
+    color: rgba(250,250,255,.8);
+}
+
+.navbar-inverse .navbar-nav .nav-link:focus, .navbar-inverse .navbar-nav .nav-link:hover {
+    color: rgba(250,250,255,1.);
+    background-color: #0f7db4;
+    -moz-border-radius: 7px;
+    -webkit-border-radius: 7px;
+    border-radius: 7px;
+
+}
+
+h1 {
+    margin-top: 2.5rem;
+    
+}
+
+summary {
+    font-size: 1.7rem;
+}
+
+@media (max-width: 500px) {
+    h1 {
+        font-size: 2rem;
+    }
+    
+    summary {
+        font-size: 1.4rem;
+    }
+}
